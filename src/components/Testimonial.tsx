@@ -293,6 +293,110 @@ const Testimonial: React.FC = () => {
             />
           </motion.div>
         </div>
+
+        {/* Second Row - Image Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-ocean-800 mb-4">
+              עוד המלצות מלקוחות מרוצים
+            </h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-coral-500 to-turquoise-500 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Image Testimonial 4 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ scale: 1.02 }}
+              className="relative group"
+            >
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-ocean-100 overflow-hidden">
+                <img 
+                  src="./images/testimonial4.png" 
+                  alt="המלצה מלקוח מרוצה"
+                  className="w-full h-auto rounded-xl shadow-lg"
+                />
+                
+                {/* Floating decorations */}
+                <motion.div
+                  animate={{ y: [-4, 4, -4], rotate: [0, 2, 0] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-coral-400 rounded-full opacity-30"
+                />
+                <motion.div
+                  animate={{ y: [4, -4, 4], rotate: [0, -2, 0] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-2 -left-2 w-8 h-8 bg-turquoise-400 rounded-full opacity-30"
+                />
+              </div>
+            </motion.div>
+
+            {/* Image Testimonial 5 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              whileHover={{ scale: 1.02 }}
+              className="relative group"
+            >
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-turquoise-100 overflow-hidden">
+                <img 
+                  src="./images/testimonial5.png" 
+                  alt="המלצה מלקוח מרוצה"
+                  className="w-full h-auto rounded-xl shadow-lg"
+                />
+                
+                {/* Floating decorations */}
+                <motion.div
+                  animate={{ y: [-3, 3, -3], rotate: [0, 3, 0] }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-2 -left-2 w-7 h-7 bg-ocean-400 rounded-full opacity-30"
+                />
+                <motion.div
+                  animate={{ y: [3, -3, 3], rotate: [0, -3, 0] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-2 -right-2 w-5 h-5 bg-coral-400 rounded-full opacity-30"
+                />
+              </div>
+            </motion.div>
+
+            {/* Image Testimonial 6 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              whileHover={{ scale: 1.02 }}
+              className="relative group"
+            >
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-coral-100 overflow-hidden">
+                <img 
+                  src="./images/testimonial6.png" 
+                  alt="המלצה מלקוח מרוצה"
+                  className="w-full h-auto rounded-xl shadow-lg"
+                />
+                
+                {/* Floating decorations */}
+                <motion.div
+                  animate={{ y: [-5, 5, -5], rotate: [0, 4, 0] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-turquoise-400 rounded-full opacity-30"
+                />
+                <motion.div
+                  animate={{ y: [5, -5, 5], rotate: [0, -4, 0] }}
+                  transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-2 -left-2 w-7 h-7 bg-ocean-400 rounded-full opacity-30"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
