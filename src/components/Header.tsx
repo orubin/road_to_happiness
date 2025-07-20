@@ -38,7 +38,7 @@ const Header: React.FC = () => {
             className="flex items-center"
           >
             <img 
-              src="/images/logo.png" 
+              src="./images/logo.png" 
               alt="דרך לאושר" 
               className="h-12 w-auto"
             />

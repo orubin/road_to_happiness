@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
             <div className="relative w-full max-w-md mx-auto">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-ocean-100 to-coral-100">
                 <img 
-                  src="/images/photo.jpg" 
+                  src="./images/photo.jpg" 
                   alt="ריינה רוסלנה גולדמן"
                   className="w-full h-full object-cover"
                 />

@@ -5,16 +5,16 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 const ImageCarousel: React.FC = () => {
   // List of images excluding logos
   const images = [
-    '/images/IMG-20250417-WA0081.jpg',
-    '/images/IMG_20250717_125008_505.jpg',
-    '/images/IMG_20250717_125018_230.jpg',
-    '/images/IMG_20250717_125027_847.jpg',
-    '/images/IMG_20250717_125101_767.jpg',
-    '/images/IMG_20250717_125111_691.jpg',
-    '/images/IMG_20250717_125146_777.jpg',
-    '/images/IMG_20250717_125158_005.jpg',
-    '/images/photo.jpg',
-    '/images/testimonial.png'
+    './images/IMG-20250417-WA0081.jpg',
+    './images/IMG_20250717_125008_505.jpg',
+    './images/IMG_20250717_125018_230.jpg',
+    './images/IMG_20250717_125027_847.jpg',
+    './images/IMG_20250717_125101_767.jpg',
+    './images/IMG_20250717_125111_691.jpg',
+    './images/IMG_20250717_125146_777.jpg',
+    './images/IMG_20250717_125158_005.jpg',
+    './images/photo.jpg',
+    './images/testimonial.png'
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)

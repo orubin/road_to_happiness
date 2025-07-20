@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
             className="text-center md:text-right"
           >
             <img 
-              src="/images/footer_logo.jpg" 
+              src="./images/footer_logo.jpg" 
               alt="דרך לאושר" 
               className="h-16 w-auto mx-auto md:mx-0 mb-4 rounded-lg shadow-lg"
             />
