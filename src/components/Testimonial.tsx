@@ -24,7 +24,8 @@ const Testimonial: React.FC = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-coral-500 to-turquoise-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6">
+          {/* Note: On mobile this will stack vertically, on large screens it will show 3 columns */}
           {/* First Testimonial - Long detailed testimonial */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -207,6 +208,88 @@ const Testimonial: React.FC = () => {
               animate={{ y: [8, -8, 8], rotate: [0, 3, 0] }}
               transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -bottom-4 -right-4 w-10 h-10 bg-coral-400 rounded-full opacity-20"
+            />
+          </motion.div>
+
+          {/* Third Testimonial - לימי's anxiety and negative thoughts testimonial */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="relative"
+          >
+            {/* Testimonial Card */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-turquoise-100 relative overflow-hidden h-full flex flex-col">
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-turquoise-100 to-ocean-100 rounded-full opacity-30 -translate-y-14 translate-x-14"></div>
+              <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-br from-coral-100 to-turquoise-100 rounded-full opacity-30 translate-y-10 -translate-x-10"></div>
+              
+              {/* Quote icon for general testimonial */}
+              <div className="flex justify-center mb-6">
+                <div className="bg-gradient-to-br from-ocean-500 to-turquoise-500 p-4 rounded-full shadow-lg">
+                  <Quote className="w-8 h-8 text-white" />
+                </div>
+              </div>
+
+              {/* Stars */}
+              <div className="flex justify-center mb-8">
+                {[...Array(5)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
+                  >
+                    <Star className="w-6 h-6 text-coral-400 fill-coral-400 mx-1" />
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Testimonial Text */}
+              <div className="text-ocean-700 leading-relaxed text-lg space-y-4 relative z-10 flex-grow">
+                <p className="font-medium text-xl text-center mb-6 text-turquoise-700">
+                  רינה מהממת❤️
+                </p>
+                
+                <p className="mb-4">
+                  היא מאוד מקצועית, ונותנת הרגשה שאפשר לפתוח ולפטור את הכל !🙏🏻
+                </p>
+                
+                <p className="font-semibold text-coral-600 mb-4">
+                  תודה על הזכות לעבור טיפול נהנתי מכל רגע❤️
+                </p>
+
+                <div className="bg-gradient-to-r from-turquoise-50 to-ocean-50 p-6 rounded-xl border-r-4 border-turquoise-400">
+                  <p className="mb-4">
+                    אני בשנה האחרונה עם הרבה חרדות ומחשבות שלילות, והיא נתתה לי כלים איך לצאת ממחשבות שליליות.
+                  </p>
+                  <p className="font-semibold text-turquoise-700">
+                    ממליצה בחום לעבור אצלה אימון מנסיון אישי...
+                  </p>
+                </div>
+
+                <p className="text-center text-2xl font-bold text-gradient bg-gradient-to-r from-turquoise-600 to-coral-600 bg-clip-text text-transparent">
+                  ❤️❤️
+                </p>
+              </div>
+
+              {/* Client signature */}
+              <div className="mt-8 pt-6 border-t border-turquoise-200 text-center">
+                <p className="text-ocean-600 font-medium">לימי</p>
+                <p className="text-ocean-500 text-sm">טיפול בחרדות ומחשבות שליליות</p>
+              </div>
+            </div>
+
+            {/* Floating decorations */}
+            <motion.div
+              animate={{ y: [-6, 6, -6], rotate: [0, 4, 0] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-4 -right-4 w-7 h-7 bg-ocean-400 rounded-full opacity-20"
+            />
+            <motion.div
+              animate={{ y: [6, -6, 6], rotate: [0, -4, 0] }}
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-4 -left-4 w-9 h-9 bg-turquoise-400 rounded-full opacity-20"
             />
           </motion.div>
         </div>
