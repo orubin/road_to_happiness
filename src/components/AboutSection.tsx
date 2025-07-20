@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-ocean-800 mb-6">
             מי אני
           </h2>
-          <div className="w-24 h-1 bg-coral-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-coral-500 to-turquoise-500 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-4 -right-4 w-8 h-8 border-2 border-coral-400 rounded-full"
+                className="absolute -top-4 -right-4 w-8 h-8 border-2 border-turquoise-400 rounded-full"
               />
               <motion.div
                 animate={{ y: [-5, 5, -5] }}

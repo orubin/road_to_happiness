@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 1, delay: 0.4 }}
               className="text-4xl md:text-6xl font-bold text-ocean-800 mb-6 leading-tight"
             >
-              דרך לאושר
+              מסע אל שלווה פנימית
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('services')}
-                className="border-2 border-ocean-500 text-ocean-700 px-8 py-4 rounded-full text-lg font-medium hover:bg-ocean-500 hover:text-white transition-all duration-300"
+                className="border-2 border-turquoise-500 text-turquoise-700 px-8 py-4 rounded-full text-lg font-medium hover:bg-turquoise-500 hover:text-white transition-all duration-300"
               >
                 השירות שלי
               </motion.button>

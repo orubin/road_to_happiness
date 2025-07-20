@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
           >
             <img 
               src="./images/footer_logo.jpg" 
-              alt="דרך לאושר" 
+              alt="מסע אל שלווה פנימית" 
               className="h-16 w-auto mx-auto md:mx-0 mb-4 rounded-lg shadow-lg"
             />
-            <h3 className="text-xl font-bold mb-2">דרך לאושר</h3>
+            <h3 className="text-xl font-bold mb-2">מסע אל שלווה פנימית</h3>
             <p className="text-ocean-200">ריינה רוסלנה גולדמן</p>
           </motion.div>
 
@@ -87,10 +87,10 @@ const Footer: React.FC = () => {
           <div className="flex items-center justify-center mb-4">
             <span className="text-ocean-200">נבנה באהבה</span>
             <Heart className="w-4 h-4 text-coral-400 mx-2 animate-pulse" />
-            <span className="text-ocean-200">עבור דרך לאושר</span>
+            <span className="text-ocean-200">עבור מסע אל שלווה פנימית</span>
           </div>
           <p className="text-ocean-300 text-sm">
-            © {new Date().getFullYear()} דרך לאושר - ריינה רוסלנה גולדמן. כל הזכויות שמורות.
+            © {new Date().getFullYear()} מסע אל שלווה פנימית - ריינה רוסלנה גולדמן. כל הזכויות שמורות.
           </p>
           <div className="mt-4 flex justify-center space-x-4 space-x-reverse">
             <motion.div

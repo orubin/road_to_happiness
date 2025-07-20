@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           >
             <img 
               src="./images/logo.png" 
-              alt="דרך לאושר" 
+              alt="מסע אל שלווה פנימית" 
               className="h-12 w-auto"
             />
           </motion.div>

@@ -8,6 +8,7 @@ import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
 import DolphinAnimation from './components/DolphinAnimation'
+import OceanSound from './components/OceanSound'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <OceanSound />
     </div>
   )
 }
