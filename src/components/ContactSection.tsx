@@ -17,7 +17,7 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: Instagram,
-      label: "Instagram", 
+      label: "Instagram",
       url: "https://www.instagram.com/rina_ruslana?igsh=OHA3dnVwc2tldjNm",
       color: "bg-pink-600 hover:bg-pink-700"
     },
@@ -67,17 +67,17 @@ const ContactSection: React.FC = () => {
                 <Phone className="w-6 h-6 text-coral-500 ml-3" />
                 פרטי קשר
               </h3>
-              
+
               <div className="space-y-4 text-ocean-700">
                 <div className="flex items-center">
                   <MapPin className="w-5 h-5 text-coral-500 ml-3 flex-shrink-0" />
-                  <span>מקבלת באהבה💞 בראשון לציון, יבנה, אשקלון או בזום 🩵</span>
+                  <span>מקבלת באשקלון בקליניקה שלי ובראשון לציון בקליניקה של המכללה ובזום🙏🏻 🩵</span>
                 </div>
-                
+
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-coral-500 ml-3 flex-shrink-0" />
-                  <a 
-                    href="https://wa.me/972507870204" 
+                  <a
+                    href="https://wa.me/972507870204"
                     className="hover:text-coral-500 transition-colors duration-300"
                   >
                     ‪+972 50‑787‑0204‬
@@ -91,7 +91,7 @@ const ContactSection: React.FC = () => {
               <h3 className="text-2xl font-bold text-ocean-800 mb-6">
                 מוזמנים להכיר אותי ולעקוב 👇
               </h3>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -121,7 +121,7 @@ const ContactSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-ocean-800 mb-6">
               שלחו הודעה
             </h3>
-            
+
             <form className="space-y-6">
               <div>
                 <label className="block text-ocean-700 font-medium mb-2">
@@ -133,7 +133,7 @@ const ContactSection: React.FC = () => {
                   placeholder="השם שלך..."
                 />
               </div>
-              
+
               <div>
                 <label className="block text-ocean-700 font-medium mb-2">
                   טלפון
@@ -144,7 +144,7 @@ const ContactSection: React.FC = () => {
                   placeholder="מספר הטלפון שלך..."
                 />
               </div>
-              
+
               <div>
                 <label className="block text-ocean-700 font-medium mb-2">
                   הודעה
@@ -155,7 +155,7 @@ const ContactSection: React.FC = () => {
                   placeholder="איך אוכל לעזור לך?"
                 ></textarea>
               </div>
-              
+
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

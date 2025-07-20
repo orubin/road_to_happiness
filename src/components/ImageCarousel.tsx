@@ -13,8 +13,7 @@ const ImageCarousel: React.FC = () => {
     './images/IMG_20250717_125111_691.jpg',
     './images/IMG_20250717_125146_777.jpg',
     './images/IMG_20250717_125158_005.jpg',
-    './images/photo.jpg',
-    './images/testimonial.png'
+    './images/photo.jpg'
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -28,7 +27,7 @@ const ImageCarousel: React.FC = () => {
   }, [images.length])
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     )
   }
@@ -73,11 +72,10 @@ const ImageCarousel: React.FC = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
                   ? 'bg-coral-500 scale-125'
                   : 'bg-white/50 hover:bg-white/80'
-              }`}
+                }`}
             />
           ))}
         </div>
