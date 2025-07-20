@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Quote, Star } from 'lucide-react'
+import { Quote, Star, Heart } from 'lucide-react'
 
 const Testimonial: React.FC = () => {
   const ref = useRef(null)
@@ -10,7 +10,7 @@ const Testimonial: React.FC = () => {
 
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-turquoise-50 to-ocean-50">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -24,12 +24,14 @@ const Testimonial: React.FC = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-coral-500 to-turquoise-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* First Testimonial - Long detailed testimonial */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
           {/* Testimonial Card */}
           <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border border-turquoise-100 relative overflow-hidden">
             {/* Background decoration */}
@@ -130,6 +132,84 @@ const Testimonial: React.FC = () => {
             className="absolute -bottom-4 -left-4 w-12 h-12 bg-turquoise-400 rounded-full opacity-20"
           />
         </motion.div>
+
+          {/* Second Testimonial - Birth support testimonial */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative"
+          >
+            {/* Testimonial Card */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-coral-100 relative overflow-hidden h-full flex flex-col">
+              {/* Background decoration */}
+              <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-coral-100 to-turquoise-100 rounded-full opacity-30 -translate-y-16 -translate-x-16"></div>
+              <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-br from-turquoise-100 to-coral-100 rounded-full opacity-30 translate-y-12 translate-x-12"></div>
+              
+              {/* Heart icon for birth/motherhood theme */}
+              <div className="flex justify-center mb-6">
+                <div className="bg-gradient-to-br from-coral-500 to-turquoise-500 p-4 rounded-full shadow-lg">
+                  <Heart className="w-8 h-8 text-white fill-white" />
+                </div>
+              </div>
+
+              {/* Stars */}
+              <div className="flex justify-center mb-8">
+                {[...Array(5)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                  >
+                    <Star className="w-6 h-6 text-coral-400 fill-coral-400 mx-1" />
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Testimonial Text */}
+              <div className="text-ocean-700 leading-relaxed text-lg space-y-4 relative z-10 flex-grow">
+                <p className="font-medium text-xl text-center mb-6 text-coral-700">
+                  רינה, בזכותך שהעברת לי מסר על שכל הפחדים לזרוק לבורא עולם!
+                </p>
+                
+                <div className="bg-gradient-to-r from-coral-50 to-turquoise-50 p-6 rounded-xl border-r-4 border-coral-400">
+                  <p className="mb-4">
+                    כי היה לי פחד ממש מלידה
+                  </p>
+                  <p className="text-sm text-ocean-600 italic mb-4">
+                    (כי בלידה קודמת הייתה לי לידה שקטה בחודש 8)
+                  </p>
+                  <p className="font-semibold text-turquoise-700">
+                    והלידה עברה בהצלחה וחשתי הכי בטוחה בעולם..
+                  </p>
+                </div>
+
+                <p className="text-center text-2xl font-bold text-gradient bg-gradient-to-r from-coral-600 to-turquoise-600 bg-clip-text text-transparent">
+                  תודה עליך🙏🏻
+                </p>
+              </div>
+
+              {/* Client signature */}
+              <div className="mt-8 pt-6 border-t border-coral-200 text-center">
+                <p className="text-ocean-600 font-medium">אמא מאושרת</p>
+                <p className="text-ocean-500 text-sm">ליווי רגשי לקראת לידה</p>
+              </div>
+            </div>
+
+            {/* Floating decorations */}
+            <motion.div
+              animate={{ y: [-8, 8, -8], rotate: [0, -3, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-4 -left-4 w-6 h-6 bg-turquoise-400 rounded-full opacity-20"
+            />
+            <motion.div
+              animate={{ y: [8, -8, 8], rotate: [0, 3, 0] }}
+              transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-4 -right-4 w-10 h-10 bg-coral-400 rounded-full opacity-20"
+            />
+          </motion.div>
+        </div>
       </div>
     </section>
   )

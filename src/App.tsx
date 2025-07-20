@@ -10,6 +10,7 @@ import WhatsAppFloat from './components/WhatsAppFloat'
 import DolphinAnimation from './components/DolphinAnimation'
 import OceanSound from './components/OceanSound'
 import Testimonial from './components/Testimonial'
+import TikTokPromo from './components/TikTokPromo'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <AboutSection />
         <ServicesSection />
         <Testimonial />
+        <TikTokPromo />
         <ContactSection />
         <DolphinAnimation />
       </main>
