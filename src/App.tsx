@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
 import DolphinAnimation from './components/DolphinAnimation'
 import OceanSound from './components/OceanSound'
+import Testimonial from './components/Testimonial'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <AboutSection />
         <ServicesSection />
+        <Testimonial />
         <ContactSection />
         <DolphinAnimation />
       </main>

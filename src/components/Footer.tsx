@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               className="h-16 w-auto mx-auto md:mx-0 mb-4 rounded-lg shadow-lg"
             />
             <h3 className="text-xl font-bold mb-2">מסע אל שלווה פנימית</h3>
-            <p className="text-ocean-200">ריינה רוסלנה גולדמן</p>
+            <p className="text-ocean-200">רינה גולדמן</p>
           </motion.div>
 
           {/* Quick Links */}
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
             <span className="text-ocean-200">עבור מסע אל שלווה פנימית</span>
           </div>
           <p className="text-ocean-300 text-sm">
-            © {new Date().getFullYear()} מסע אל שלווה פנימית - ריינה רוסלנה גולדמן. כל הזכויות שמורות.
+            © {new Date().getFullYear()} מסע אל שלווה פנימית - רינה גולדמן. כל הזכויות שמורות.
           </p>
           <div className="mt-4 flex justify-center space-x-4 space-x-reverse">
             <motion.div

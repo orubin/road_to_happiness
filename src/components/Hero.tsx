@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 1, delay: 0.6 }}
               className="text-xl md:text-2xl text-ocean-600 mb-8 font-medium"
             >
-              ריינה רוסלנה גולדמן
+              רינה גולדמן
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
