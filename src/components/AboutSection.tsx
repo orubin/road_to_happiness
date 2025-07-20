@@ -62,7 +62,7 @@ const AboutSection: React.FC = () => {
           >
             <div className="prose prose-lg max-w-none text-ocean-700 leading-relaxed">
               <p className="text-xl mb-6">
-                שלום, אני ריינה רוסלנה גולדמן 🌊
+                שלום, אני רינה גולדמן 🌊
               </p>
               
               <p className="mb-6">
