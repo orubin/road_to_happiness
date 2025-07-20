@@ -11,6 +11,7 @@ import DolphinAnimation from './components/DolphinAnimation'
 import OceanSound from './components/OceanSound'
 import Testimonial from './components/Testimonial'
 import TikTokPromo from './components/TikTokPromo'
+import CollegeImage from './components/CollegeImage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <ServicesSection />
         <Testimonial />
         <TikTokPromo />
+        <CollegeImage />
         <ContactSection />
         <DolphinAnimation />
       </main>
