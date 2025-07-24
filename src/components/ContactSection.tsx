@@ -36,7 +36,7 @@ const ContactSection: React.FC = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 w-full">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           ref={ref}

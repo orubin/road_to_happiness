@@ -15,9 +15,9 @@ import CollegeImage from './components/CollegeImage'
 
 function App() {
   return (
-    <div className="min-h-screen ocean-bg rtl">
+    <div className="min-h-screen ocean-bg rtl overflow-x-hidden w-full">
       <Header />
-      <main className="relative">
+      <main className="relative w-full overflow-x-hidden">
         <Hero />
         <AboutSection />
         <ServicesSection />

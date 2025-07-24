@@ -32,7 +32,7 @@ const ServicesSection: React.FC = () => {
   ]
 
   return (
-    <section id="services" className="py-20 px-4 bg-white/30 backdrop-blur-sm">
+    <section id="services" className="py-20 px-4 w-full bg-white/30 backdrop-blur-sm">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           ref={ref}

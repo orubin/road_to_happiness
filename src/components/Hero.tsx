@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 px-4">
+    <section className="min-h-screen flex items-center justify-center pt-20 px-4 w-full">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-center lg:text-right"
+            className="text-center"
           >
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="text-lg text-ocean-700 mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+              className="text-lg text-ocean-700 mb-12 leading-relaxed max-w-2xl mx-auto"
             >
               מלווה אותך במסע האישי שלך לאושר, שלווה ומימוש עצמי. 
               יחד נגלה את הכוח הפנימי שלך ונבנה חיים מלאי משמעות ושמחה.
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}

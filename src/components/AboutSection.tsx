@@ -8,7 +8,7 @@ const AboutSection: React.FC = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-20 px-4 w-full">
       <div className="container mx-auto max-w-4xl">
         <motion.div
           ref={ref}
@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-6"
+            className="space-y-6 text-center lg:text-right"
           >
             <div className="prose prose-lg max-w-none text-ocean-700 leading-relaxed">
               <p className="text-xl mb-6">
