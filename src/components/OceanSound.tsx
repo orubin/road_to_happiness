@@ -12,28 +12,42 @@ const OceanSound: React.FC = () => {
     if (audio) {
       audio.volume = 0.2 // Set to 20% volume for ambient sound
       
-      // Try to autoplay after user interaction
-      const handleUserInteraction = () => {
-        if (!isPlaying) {
-          audio.play().then(() => {
-            setIsPlaying(true)
-          }).catch(() => {
-            console.log('Autoplay prevented by browser')
-          })
+      // Try to autoplay immediately when component mounts
+      const attemptAutoplay = async () => {
+        try {
+          await audio.play()
+          setIsPlaying(true)
+        } catch (error) {
+          console.log('Initial autoplay prevented by browser, waiting for user interaction')
+          
+          // Fallback: Try to autoplay after user interaction
+          const handleUserInteraction = async () => {
+            try {
+              await audio.play()
+              setIsPlaying(true)
+              document.removeEventListener('click', handleUserInteraction)
+              document.removeEventListener('touchstart', handleUserInteraction)
+              document.removeEventListener('keydown', handleUserInteraction)
+            } catch (err) {
+              console.log('Could not play audio even after user interaction')
+            }
+          }
+          
+          document.addEventListener('click', handleUserInteraction)
+          document.addEventListener('touchstart', handleUserInteraction)
+          document.addEventListener('keydown', handleUserInteraction)
+          
+          return () => {
+            document.removeEventListener('click', handleUserInteraction)
+            document.removeEventListener('touchstart', handleUserInteraction)
+            document.removeEventListener('keydown', handleUserInteraction)
+          }
         }
-        document.removeEventListener('click', handleUserInteraction)
-        document.removeEventListener('touchstart', handleUserInteraction)
       }
       
-      document.addEventListener('click', handleUserInteraction)
-      document.addEventListener('touchstart', handleUserInteraction)
-      
-      return () => {
-        document.removeEventListener('click', handleUserInteraction)
-        document.removeEventListener('touchstart', handleUserInteraction)
-      }
+      attemptAutoplay()
     }
-  }, [isPlaying])
+  }, [])
 
   const toggleSound = () => {
     const audio = audioRef.current
@@ -61,10 +75,8 @@ const OceanSound: React.FC = () => {
         className="hidden"
         muted={isMuted}
       >
-        {/* Using a royalty-free ocean sound URL */}
-        <source src="https://www.soundjay.com/misc/sounds/ocean-wave-1.wav" type="audio/wav" />
-        {/* Fallback ocean sound */}
-        <source src="https://actions.google.com/sounds/v1/water/ocean_waves_crashing_on_rocks.ogg" type="audio/ogg" />
+        {/* Local ocean sound file */}
+        <source src="/assets/soothing-ocean-waves-372489.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Floating Sound Control Button */}

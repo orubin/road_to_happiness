@@ -26,9 +26,14 @@ const Header: React.FC = () => {
       transition={{ duration: 0.8 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
+          ? 'bg-white/90 backdrop-blur-md shadow-lg header-accent' 
+          : 'bg-transparent header-accent'
       }`}
+      style={{
+        background: isScrolled 
+          ? 'linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(56,189,197,0.1) 100%)' 
+          : 'linear-gradient(to bottom, rgba(56,189,197,0.2) 0%, rgba(56,189,197,0.05) 50%, transparent 100%)'
+      }}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">

@@ -4,7 +4,12 @@ import { Heart } from 'lucide-react'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-ocean-900 text-white py-12 px-4">
+    <footer 
+      className="bg-ocean-900 footer-accent text-white py-12 px-4"
+      style={{
+        background: 'linear-gradient(to bottom, rgba(56,189,197,0.15) 0%, rgba(13,55,65,1) 40%, rgba(13,55,65,1) 100%)'
+      }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
