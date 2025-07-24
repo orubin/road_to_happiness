@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Volume2, VolumeX } from 'lucide-react'
 
 const OceanSound: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true) // Default to true - audio should be "on" by default
   const [isMuted, setIsMuted] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null)
 
@@ -16,20 +16,23 @@ const OceanSound: React.FC = () => {
       const attemptAutoplay = async () => {
         try {
           await audio.play()
-          setIsPlaying(true)
+          // Audio is already playing successfully, isPlaying is already true
         } catch (error) {
           console.log('Initial autoplay prevented by browser, waiting for user interaction')
           
           // Fallback: Try to autoplay after user interaction
+          // Keep isPlaying as true to show the "on" state even if autoplay fails initially
           const handleUserInteraction = async () => {
             try {
               await audio.play()
-              setIsPlaying(true)
+              // Audio is now playing, isPlaying is already true
               document.removeEventListener('click', handleUserInteraction)
               document.removeEventListener('touchstart', handleUserInteraction)
               document.removeEventListener('keydown', handleUserInteraction)
             } catch (err) {
               console.log('Could not play audio even after user interaction')
+              // Only now set to false if we really can't play
+              setIsPlaying(false)
             }
           }
           
@@ -71,6 +74,7 @@ const OceanSound: React.FC = () => {
       <audio
         ref={audioRef}
         loop
+        autoPlay
         preload="auto"
         className="hidden"
         muted={isMuted}
