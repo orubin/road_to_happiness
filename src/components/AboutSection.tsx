@@ -33,8 +33,8 @@ const AboutSection: React.FC = () => {
           >
             <div className="relative w-full max-w-md mx-auto">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-ocean-100 to-coral-100">
-                <img 
-                  src="./images/photo.jpg" 
+                <img
+                  src="./images/photo.jpg"
                   alt="רינה גולדמן"
                   className="w-full h-full object-cover"
                 />
@@ -64,19 +64,19 @@ const AboutSection: React.FC = () => {
               <p className="text-xl mb-6">
                 שלום, אני רינה גולדמן 🌊
               </p>
-              
+
               <p className="mb-6">
-                אני מאמינה שכל אחד מאיתנו נושא בתוכו את הכוח לחיות חיים מלאי אושר ומשמעות. 
+                אני מאמינה שכל אחד מאיתנו נושא בתוכו את הכוח לחיות חיים מלאי אושר ומשמעות.
                 במשך שנים רבות אני מלווה אנשים במסע האישי שלהם לגילוי העצמי ולמימוש הפוטנציאל הפנימי.
               </p>
 
               <p className="mb-6">
-                המטרה שלי היא לעזור לך לגלות את הדרך הייחודית שלך לאושר, 
-                לפתח כלים פרактיים להתמודדות עם אתגרי החיים, ולבנות חיים מלאי שמחה ושלווה פנימית.
+                המטרה שלי היא לעזור לך לגלות את הדרך הייחודית שלך לאושר,
+                לפתח כלים פרקטיים להתמודדות עם אתגרי החיים, ולבנות חיים מלאי שמחה ושלווה פנימית.
               </p>
 
               <p className="mb-6">
-                יחד נעבור מסע של צמיחה אישית, נחקור את הערכים והחלומות שלך, 
+                יחד נעבור מסע של צמיחה אישית, נחקור את הערכים והחלומות שלך,
                 ונבנה תוכנית פעולה מותאמת אישית שתוביל אותך לחיים שאתה באמת רוצה לחיות.
               </p>
 
